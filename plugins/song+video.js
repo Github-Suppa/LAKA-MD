@@ -16,8 +16,8 @@ const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
 
-let desc = '
-🌟 *LAKA-MD SONG DOWNLOADER* 🌟
+let desc = `
+🌟*LAKA-MD SONG DOWNLOADER*🌟
 
 title: ${data.title}
 description: ${data.description}
@@ -26,7 +26,7 @@ ago: ${data.ago}
 views: ${data.views}
 
 MADE BY LAKA-OFC 💜
-'
+`
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
 //download audio
