@@ -11,7 +11,7 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply(" *please give me url or title* ")
+if(!q) return reply(" *Please give me url or title* ")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
@@ -19,13 +19,13 @@ const url = data.url
 let desc = `
 🌟 *LAKA-MD SONG DOWNLOADER* 🌟
 
-title: ${data.title}
-description: ${data.description}
-time: ${data.timestamp}
-ago: ${data.ago}
-views: ${data.views}
+*Title:* ${data.title}
+*Description:* ${data.description}
+*Time:* ${data.timestamp}
+*Ago:* ${data.ago}
+*Views:* ${data.views}
 
-MADE BY LAKA-OFC 💜
+💗 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙻𝙰𝙺𝙰-𝙾𝙵𝙲 💗
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
