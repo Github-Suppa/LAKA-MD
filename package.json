@@ -4,9 +4,9 @@
   "description": "A WhatsApp bot created using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name LAKA-MD",
-    "stop": "pm2 stop LAKA-MD",
-    "restart": "pm2 restart LAKA-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name lakabot",
+    "stop": "pm2 stop lakabot",
+    "restart": "pm2 restart lakabot"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "6.6.0",
